@@ -18,5 +18,6 @@ steps:
   - 'images'
 
 - name: 'debian:jessie'
+  entrypoint: 'bash'
   args:
-  - '/bin/bash -c "pwd && ls"'
+  - '-c "pwd && ls"'
