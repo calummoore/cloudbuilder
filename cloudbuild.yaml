@@ -12,7 +12,11 @@ steps:
   args:
   - 'info'
 
-
-- name: 'node'
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'docker'
   args:
-  - 'node ./index'
+  - 'images'
+
+- name: 'debian:jessie'
+  args:
+  - 'pwd && ls'
