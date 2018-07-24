@@ -5,7 +5,13 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'docker'
   args:
-  - 'docker info'
+  - 'version'
+
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'docker'
+  args:
+  - 'info'
+
 
 - name: 'node'
   args:
