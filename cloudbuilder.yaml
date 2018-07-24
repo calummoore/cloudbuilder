@@ -1,0 +1,12 @@
+steps:
+- name: gcr.io/cloud-builders/git
+  args: ['clone', 'https://github.com/GoogleCloudPlatform/cloud-builders']
+
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'docker'
+  args:
+  - 'docker info'
+
+- name: 'node'
+  args:
+  - 'node ./index'
