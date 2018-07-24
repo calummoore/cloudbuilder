@@ -19,4 +19,4 @@ steps:
 
 - name: 'debian:jessie'
   args:
-  - 'pwd && ls'
+  - '/bin/bash -c "pwd && ls"'
