@@ -12,6 +12,24 @@ steps:
   args:
   - 'info'
 
+- name: 'docker'
+  entrypoint: 'docker'
+  args:
+  - 'info'
+
+- name: 'docker'
+  entrypoint: 'docker'
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/forms-178715/cloudbuild'
+  - '.'
+
+- name: 'docker'
+  args:
+  - 'push'
+  - 'gcr.io/forms-178715/cloudbuild'
+
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'docker'
   args:
