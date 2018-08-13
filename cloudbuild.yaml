@@ -13,6 +13,11 @@ steps:
   - 'info'
 
 - name: 'docker'
+  entrypoint: 'cat'
+  args:
+  - '/root/.docker/config.json'
+
+- name: 'docker'
   entrypoint: 'docker'
   args:
   - 'info'
