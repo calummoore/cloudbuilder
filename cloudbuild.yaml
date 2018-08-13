@@ -1,5 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'docker'
   # entrypoint: 'docker'
   # args:
   # - 'version'
@@ -19,7 +19,7 @@ steps:
 #   - 'inspect'
 #   - 'homevol'
 
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'docker'
   entrypoint: 'cat'
   args:
   - '/builder/home/.docker/config.json'
