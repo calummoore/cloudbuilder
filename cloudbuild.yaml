@@ -22,13 +22,13 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/forms-178715/cloudbuild'
+  - 'gcr.io/flow-211412/cloudbuild'
   - '.'
 
 - name: 'docker'
   args:
   - 'push'
-  - 'gcr.io/forms-178715/cloudbuild'
+  - 'gcr.io/flow-211412/cloudbuild'
 
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'docker'
