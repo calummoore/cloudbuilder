@@ -19,10 +19,10 @@ steps:
 #   - 'inspect'
 #   - 'homevol'
 
-# - name: 'docker'
-#   entrypoint: 'cat'
-#   args:
-#   - '~/.docker/config.json'
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'cat'
+  args:
+  - '/builder/home/.docker/config.json'
 
 # - name: 'docker'
 #   entrypoint: 'docker'
