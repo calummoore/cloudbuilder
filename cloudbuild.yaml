@@ -16,7 +16,8 @@ steps:
   entrypoint: 'docker'
   args:
   - 'volume'
-  - 'list'
+  - 'inspect'
+  - 'homevol'
 
 # - name: 'docker'
 #   entrypoint: 'cat'
