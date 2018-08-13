@@ -12,10 +12,16 @@ steps:
   args:
   - 'info'
 
-- name: 'docker'
-  entrypoint: 'cat'
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'docker'
   args:
-  - '~/.docker/config.json'
+  - 'volume'
+  - 'list'
+
+# - name: 'docker'
+#   entrypoint: 'cat'
+#   args:
+#   - '~/.docker/config.json'
 
 - name: 'docker'
   entrypoint: 'docker'
