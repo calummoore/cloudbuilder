@@ -15,7 +15,9 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'docker'
   args:
-  - 'volume inspect homevol'
+  - 'volume'
+  - 'inspect'
+  - 'homevol'
 
 # - name: 'docker'
 #   entrypoint: 'cat'
