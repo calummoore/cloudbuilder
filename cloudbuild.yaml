@@ -15,7 +15,7 @@ steps:
 - name: 'docker'
   entrypoint: 'cat'
   args:
-  - '/root/.docker/config.json'
+  - '~/.docker/config.json'
 
 - name: 'docker'
   entrypoint: 'docker'
@@ -27,13 +27,13 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/flow-211412/cloudbuild'
+  - 'gcr.io/forms-178715/cloudbuild'
   - '.'
 
 - name: 'docker'
   args:
   - 'push'
-  - 'gcr.io/flow-211412/cloudbuild'
+  - 'gcr.io/forms-178715/cloudbuild'
 
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'docker'
