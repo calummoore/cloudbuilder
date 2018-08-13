@@ -4,48 +4,41 @@ steps:
   args:
   - 'version'
 
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'env'
+# - name: 'gcr.io/cloud-builders/docker'
+#   entrypoint: 'env'
+
+# - name: 'gcr.io/cloud-builders/docker'
+#   entrypoint: 'docker'
+#   args:
+#   - 'info'
 
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'docker'
   args:
-  - 'info'
-
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'docker'
-  args:
-  - 'volume'
-  - 'inspect'
-  - 'homevol'
+  - 'volume inspect homevol'
 
 # - name: 'docker'
 #   entrypoint: 'cat'
 #   args:
 #   - '~/.docker/config.json'
 
-- name: 'docker'
-  entrypoint: 'docker'
-  args:
-  - 'info'
+# - name: 'docker'
+#   entrypoint: 'docker'
+#   args:
+#   - 'build'
+#   - '-t'
+#   - 'gcr.io/forms-178715/cloudbuild'
+#   - '.'
 
-- name: 'docker'
-  entrypoint: 'docker'
-  args:
-  - 'build'
-  - '-t'
-  - 'gcr.io/forms-178715/cloudbuild'
-  - '.'
+# - name: 'docker'
+#   args:
+#   - 'push'
+#   - 'gcr.io/forms-178715/cloudbuild'
 
-- name: 'docker'
-  args:
-  - 'push'
-  - 'gcr.io/forms-178715/cloudbuild'
-
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'docker'
-  args:
-  - 'images'
+# - name: 'gcr.io/cloud-builders/docker'
+#   entrypoint: 'docker'
+#   args:
+#   - 'images'
 
 - name: 'debian:jessie'
-  args: ['bash', '-c', 'ls']
+  args: ['bash', '-c', 'ls ']
